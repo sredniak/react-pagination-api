@@ -1,0 +1,8 @@
+caption{
+    font-size: 11px;
+}
+
+caption > a{
+    text-decoration: none;
+    color: gray;
+}
