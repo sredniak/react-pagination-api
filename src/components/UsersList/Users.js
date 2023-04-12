@@ -12,8 +12,8 @@ function Users({posts, loading}) {
   
   
     return (
-      <div class="table-responsive-sm">
-      <table class="table table-hover">
+      <div className="table-responsive-sm">
+      <table className="table table-hover">
       <caption>source: <a href='https://jsonplaceholder.typicode.com/users'>https://jsonplaceholder.typicode.com/users</a></caption>
         <thead >
           <tr>

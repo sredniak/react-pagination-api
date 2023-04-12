@@ -13,7 +13,7 @@ function Posts({posts, loading}) {
   
     return (
 
-      <table class="table table-hover">
+      <table className="table table-hover">
         <caption>source: <a href='https://jsonplaceholder.typicode.com/posts'>https://jsonplaceholder.typicode.com/posts</a></caption>
         <thead >
           <tr>

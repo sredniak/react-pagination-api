@@ -11,7 +11,7 @@ function PostsList() {
 const [posts, setPosts] = useState([]);
 const [loading, setLoading] = useState(false);
 const [currentPage, setCurrentPage] = useState(1);
-const [postsPerPage, setPostsPerPage] = useState(10);
+const [postsPerPage] = useState(10);
 
 
 useEffect(() => {
@@ -37,7 +37,7 @@ const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 //Change page
 const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-console.log(posts);
+
 
   return (
     <Wrapper>
