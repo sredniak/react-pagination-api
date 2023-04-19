@@ -1,7 +1,8 @@
 import React from 'react';
 import "../Posts/Posts.css";
+import PropTypes from 'prop-types';
 
-function Users({posts, loading}) {
+function Users({users = 'user data', loading}) {
   
     if(loading) {
         return <div className="spinner-border text-primary position-absolute top-50 start-50" role="status">
@@ -30,19 +31,19 @@ function Users({posts, loading}) {
         </thead>
         
           
-        {posts.map(post => (
+        {users.map(user => (
           <tbody>
           <tr className='hover'>
-            <th key={post.id} scope="row" className='id-column'>
-                {post.id}
+            <th key={user.id} scope="row" className='id-column'>
+                {user.id}
             </th>
-            <td>{post.name}</td>
-            <td>{post.username}</td>
-            <td>{post.email}</td>
-            <td>{post.phone}</td>
-            <td>{post.website}</td>
-            <td>{post.company.name}</td>
-            <td>{post.address.city}</td>
+            <td>{user.name}</td>
+            <td>{user.username}</td>
+            <td>{user.email}</td>
+            <td>{user.phone}</td>
+            <td>{user.website}</td>
+            <td>{user.company.name}</td>
+            <td>{user.address.city}</td>
             </tr>
             </tbody>
         ))}
@@ -52,5 +53,18 @@ function Users({posts, loading}) {
     </div>
   )
 }
+
+Users.propTypes = {
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    username: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    website: PropTypes.string,
+    company: PropTypes.string,
+    address: PropTypes.string,
+  }),
+};
 
 export default Users;

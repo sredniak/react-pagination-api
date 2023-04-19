@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Posts.css";
+import PropTypes from 'prop-types';
 
 function Posts({posts, loading}) {
   
@@ -36,7 +37,15 @@ function Posts({posts, loading}) {
         
         
     </table>
-  )
+  );
+
 }
+
+Posts.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+  }),
+};
 
 export default Posts;
